@@ -131,6 +131,8 @@ async def help(ctx):
     embed.add_field(name="=info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name="=help", value="Gives this message", inline=False)
     embed.add_field(name="=dailycute", value="show a cute img of the day", inline=False)
+    embed.add_field(name="=join", value="join current channel", inline=False)
+    embed.add_field(name="=leave", value="leave current channel", inline=False)
     embed.add_field(name="=play", value="play [url](youtube)", inline=False)
     embed.add_field(name="=play1", value="play [url](youtube)", inline=False)
 
