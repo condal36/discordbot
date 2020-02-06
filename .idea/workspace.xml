@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XFhzSOlTEbZa0VelZN4hPL3XJX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -54,6 +59,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="13" y="5" key="SettingsEditor" timestamp="1580969312360">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="13" y="5" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1580969312360" />
     <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1580875219513">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
