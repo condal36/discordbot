@@ -4,7 +4,6 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from discord.utils import get
 from discord import FFmpegPCMAudio
-import time
 import youtube_dl
 
 
@@ -51,7 +50,6 @@ async def play(ctx, url: str):
         return
     await ctx.send("Getting everything ready, playing audio soon")
     print("Someone wants to play music let me get that ready for them...")
-    voice = get(bot.voice_clients, guild=ctx.guild)
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -65,6 +63,35 @@ async def play(ctx, url: str):
     for file in os.listdir("./"):
         if file.endswith(".mp3"):
             os.rename(file, 'song.mp3')
+    voice = get(bot.voice_clients, guild=ctx.guild)
+    voice.play(discord.FFmpegPCMAudio("song.mp3"))
+    voice.volume = 100
+    voice.is_playing()
+@bot.command(pass_context=True, brief="This will play a song 'play [url]'", aliases=['sp'])
+async def splay(ctx, url: str):
+    song_there = os.path.isfile("song.mp3")
+    try:
+        if song_there:
+            os.remove("song.mp3")
+    except PermissionError:
+        await ctx.send("Wait for the current playing music end or use the 'stop' command")
+        return
+    await ctx.send("Getting everything ready, playing audio soon")
+    print("Someone wants to play music let me get that ready for them...")
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download(["ytsearch:"+url])
+    for file in os.listdir("./"):
+        if file.endswith(".mp3"):
+            os.rename(file, 'song.mp3')
+    voice = get(bot.voice_clients, guild=ctx.guild)
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
     voice.volume = 100
     voice.is_playing()
@@ -134,7 +161,7 @@ async def help(ctx):
     embed.add_field(name="=join", value="join current channel", inline=False)
     embed.add_field(name="=leave", value="leave current channel", inline=False)
     embed.add_field(name="=play", value="play [url](youtube)", inline=False)
-    embed.add_field(name="=play1", value="play [url](youtube)", inline=False)
-
+    embed.add_field(name="=play1", value="play a long bgm", inline=False)
+    embed.add_field(name="=splay / =sp", value="search&play song on youtube", inline=False)
     await ctx.send(embed=embed)
 bot.run(TOKEN)
