@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="352ee2dd-3433-40f2-a168-3c347f0688c3" name="Default Changelist" comment="" />
+    <list default="true" id="352ee2dd-3433-40f2-a168-3c347f0688c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newdiscord.py" beforeDir="false" afterPath="$PROJECT_DIR$/newdiscord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notdiscord.py" beforeDir="false" afterPath="$PROJECT_DIR$/notdiscord.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +34,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\discordbot\data\dailycute" />
       <recent name="C:\Users\user\PycharmProjects\discordbot" />
     </key>
   </component>
@@ -63,9 +68,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="5" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1580969312360" />
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1580875219513">
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1580989712941">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1580875219513" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1580989712941" />
   </component>
 </project>

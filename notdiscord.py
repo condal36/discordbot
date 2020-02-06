@@ -22,7 +22,10 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+@bot.command(pass_context=True, brief="This will show a daily cute pic", aliases=['dq'])
+async def dailycute(ctx):
 
+    await ctx.send(file=discord.File('./data/dailycute/1.jpg'))
 @bot.command()
 async def add(ctx, a:eval,b:eval):
     await ctx.send(a+b)
@@ -102,16 +105,16 @@ async def cat(ctx):
 
 @bot.command()
 async def info(ctx):
-    embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
+    embed = discord.Embed(title="島邊機器人", description="一個不起眼的島邊機器人", color=0xeee657)
 
     # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    embed.add_field(name="Author", value="王蟲四竄北南")
 
     # Shows the number of servers the bot is member of.
     embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
 
     # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+    embed.add_field(name="Invite", value="[Invite link](DO NOT SUPPORT)")
 
     await ctx.send(embed=embed)
 
@@ -127,7 +130,9 @@ async def help(ctx):
     embed.add_field(name="=cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
     embed.add_field(name="=info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name="=help", value="Gives this message", inline=False)
+    embed.add_field(name="=dailycute", value="show a cute img of the day", inline=False)
+    embed.add_field(name="=play", value="play [url](youtube)", inline=False)
+    embed.add_field(name="=play1", value="play [url](youtube)", inline=False)
 
     await ctx.send(embed=embed)
-
 bot.run(TOKEN)
